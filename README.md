@@ -1,4 +1,4 @@
-# backend-nrp
+# backend-5053241043
 
 Repo tugas mata kuliah **Pengembangan Backend Dasar**, dibuat dari template [`webdev-if-its/backend-template`](https://github.com/webdev-if-its/backend-template). Ganti judul di atas jadi nama repo kalian sendiri (`backend-nrp`, contoh: `backend-5025201012`).
 
@@ -27,21 +27,24 @@ Kalau dosen memperbaiki sesuatu di pertemuan yang sudah dirilis (mis. ada bug di
 Bagian di bawah ini **isi bertahap** sesuai level yang sedang kalian kerjakan (lihat `pertemuan-01/SOAL.md`) — heading-nya dicek otomatis, jangan diganti namanya.
 
 ## Identitas
-- Nama: (tulis di sini)
-- NRP: (tulis di sini)
-- Kelas: (tulis di sini)
+- Nama: Muhammad Alfaraldi Raihan
+- NRP: 5053241043
+- Kelas: M
 
 ## Commit vs Push
-(tulis di sini)
+Commit berfungsi menyimpan snapshot perubahan ke riwayat repository yang ada di komputer lokal, dan proses ini bisa dilakukan tanpa koneksi internet. Push baru mengirimkan commit-commit tersebut ke remote repository agar bisa terlihat dan diakses dari sana. Contohnya seorang anggota tim sudah commit perbaikan bug di laptopnya, tapi lupa push ke remote. Anggota tim lain yang pull dari remote tidak akan melihat perbaikan itu sama sekali, sehingga mereka mengira bug belum diperbaiki dan bisa jadi malah mengerjakan ulang hal yang sama, atau melanjutkan pekerjaan di atas kode yang masih bermasalah.
+
 
 ## Reproducibility
-(tulis di sini)
+Untuk program sederhana seperti ini, perbedaan versi Go pada umumnya tidak menimbulkan masalah. Fungsi runtime.Version() hanya menampilkan informasi versi Go yang digunakan saat proses compile, dan tidak memengaruhi logika program itu sendiri. Artinya, apabila anggota tim menjalankan program ini dengan versi Go yang berbeda, output program akan tetap sama, kecuali pada bagian yang menampilkan versi tersebut.
+
+Namun, perbedaan versi Go dapat menjadi masalah nyata dalam kondisi tertentu, terutama jika kode program sudah menggunakan fitur bahasa yang baru tersedia pada versi tertentu. Sebagai contoh, jika seorang anggota tim menulis kode menggunakan fitur ini, sementara anggota lain masih menggunakan versi Go yang lebih lama, kode tersebut akan gagal di-compile pada perangkat anggota tim yang bersangkutan. Selain itu, perubahan kecil pada perilaku standard library antarversi juga berpotensi menghasilkan keluaran program yang berbeda meskipun kode sumbernya identik.
+
+Untuk mencegah masalah tersebut, sebaiknya versi Go yang digunakan disepakati bersama, sehingga seluruh anggota tim memiliki acuan versi minimum yang harus digunakan.
 
 ## Catatan Merge Conflict
-(tulis di sini)
-
+(tulis disini)
 ## Kenapa .gitignore Penting
-(tulis di sini)
-
+(tulis disini)
 ## Refleksi
-(tulis di sini)
+(tulis disini)

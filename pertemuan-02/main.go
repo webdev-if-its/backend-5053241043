@@ -41,7 +41,18 @@ func TotalSetelahDiskon(qty []int, hargaSatuan []float64, tarifPajak float64) fl
 }
 
 func ValidasiPesanan(qty []int, hargaSatuan []float64) (bool, string) {
-	panic("belum diimplementasikan")
+	if len(qty) != len(hargaSatuan) {
+		return false, "Jumlah item dan harga satuan tidak sesuai"
+	}
+	for i := range qty {
+		if qty[i] <= 0 {
+			return false, "ada jumlah barang yang bukan bilangan positif"
+		}
+		if hargaSatuan[i] <= 0 {
+			return false, "ada harga satuan yang bukan bilangan positif"
+		}
+	}
+	return true, ""
 }
 
 func TentukanStatus(total float64) string {
